@@ -30,10 +30,10 @@ class UserController extends Controller
                 ]);
                 return redirect('/home');
             } else {
-                return redirect('/login')->with('error', 'Username / Password yang Anda masukkan salah!');
+                return redirect('/login')->with('error', 'Username/Password yang Anda masukkan salah!');
             }
         } else {
-            return redirect('/login')->with('error', 'Username / Password yang Anda masukkan salah!');
+            return redirect('/login')->with('error', 'Username/Password yang Anda masukkan salah!');
         }
     }
 
