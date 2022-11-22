@@ -1,6 +1,6 @@
 @extends('templates/app')
-@section('title', 'Data Drug')
-@section('subtitle', 'Drugs List')
+@section('title', 'Data Obat | Apotek Firdan Farma')
+@section('subtitle', 'List Obat')
 @section('content')
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -23,13 +23,13 @@
 				<thead>
 					<tr>
 						<th>Icon</th>
-						<th>Code</th>
-						<th>Supplier ID</th>
-						<th>Name Drug</th>
-						<th>Producer</th>
-						<th>Stock</th>
-						<th>Price</th>
-						<th>Option</th>
+						<th>Kode</th>
+						<th>ID Supplier</th>
+						<th>Nama Obat</th>
+						<th>Produsen</th>
+						<th>Stok</th>
+						<th>Harga</th>
+						<th>Opsi</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -43,7 +43,7 @@
 						<td>{{ $drug->name_drug }}</td>
 						<td>{{ $drug->producer }}</td>
 						<td>{{ $drug->stock }}</td>
-						<td>Rp. {{ $drug->price }}</td>
+						<td>Rp{{ $drug->price }}</td>
 						<td>
 							<a href="/drug/show/{{ $drug->id }}" class="btn btn-info">detail</a>
 						</td>

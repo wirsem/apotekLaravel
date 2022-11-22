@@ -38,7 +38,7 @@ class TransactionController extends Controller
         Transaction::create($data);
 
         // kembali ke halaman transaction sambil membawa session
-        return redirect('/transaction')->with('created', 'New transaction has been added!');
+        return redirect('/transaction')->with('created', 'Transaksi baru berhasil ditambah');
     }
 
     public function edit(Transaction $transaction)
@@ -57,13 +57,13 @@ class TransactionController extends Controller
         $transaction->update($data);
 
         // kembali ke halaman transaction sambil membawa session
-        return redirect('/transaction')->with('updated', 'transaction has been updated!');
+        return redirect('/transaction')->with('updated', 'Transaksi berhasil diperbarui');
     }
 
     public function delete(Transaction $transaction)
     {
         $transaction->delete();
 
-        return redirect()->to('/transaction')->with('deleted', 'transaction has been deleted!');
+        return redirect()->to('/transaction')->with('deleted', 'Transaksi berhasil dihapus');
     }
 }

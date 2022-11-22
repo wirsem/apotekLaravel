@@ -45,7 +45,7 @@ class DrugController extends Controller
         Drug::create($data);
 
         // kembali ke halaman drug sambil membawa session
-        return redirect('/drug')->with('created', 'New drug has been added!');
+        return redirect('/drug')->with('created', 'Obat berhasil ditambahkan');
     }
 
     public function edit(Drug $drug)
@@ -78,7 +78,7 @@ class DrugController extends Controller
         $drug->update($data);
 
         // kembali ke halaman drug sambil membawa session
-        return redirect('/drug')->with('updated', 'Drug has been updated!');
+        return redirect('/drug')->with('updated', 'Obat berhasil diperbarui');
     }
 
     public function delete(Drug $drug)
@@ -89,7 +89,7 @@ class DrugController extends Controller
 
         $drug->delete();
 
-        return redirect()->to('/drug')->with('deleted', 'Drug has been deleted!');
+        return redirect()->to('/drug')->with('deleted', 'Obat berhasil dihapus');
     }
 }
 

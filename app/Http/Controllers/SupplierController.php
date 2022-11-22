@@ -36,7 +36,7 @@ class SupplierController extends Controller
         Supplier::create($data);
 
         // kembali ke halaman supplier sambil membawa session
-        return redirect('/supplier')->with('created', 'New supplier has been added!');
+        return redirect('/supplier')->with('created', 'Supplier berhasil ditambahkan');
     }
 
     public function edit(Supplier $supplier)
@@ -55,13 +55,13 @@ class SupplierController extends Controller
         $supplier->update($data);
 
         // kembali ke halaman supplier sambil membawa session
-        return redirect('/supplier')->with('updated', 'Supplier has been updated!');
+        return redirect('/supplier')->with('updated', 'Supplier berhasil diperbarui');
     }
 
     public function delete(Supplier $supplier)
     {
         $supplier->delete();
 
-        return redirect()->to('/supplier')->with('deleted', 'Supplier has been deleted!');
+        return redirect()->to('/supplier')->with('deleted', 'Supplier berhasil dihapus');
     }
 }

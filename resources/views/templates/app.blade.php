@@ -41,7 +41,7 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-medkit"></i>
                 </div>
-                <div class="sidebar-brand-text mx-2">Apotek <sup>Laravel</sup></div>
+                <div class="sidebar-brand-text mx-2">Apotek Firdan Farma</div>
             </a>
 
             <!-- Divider -->
@@ -67,12 +67,12 @@
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
                     aria-expanded="true" aria-controls="collapseOne">
                     <i class="fas fa-fw fa-pills"></i>
-                    <span>Drugs</span>
+                    <span>Obat</span>
                 </a>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="/drug">Drugs List</a>
-                        <a class="collapse-item" href="/drug/add">Add Drug</a>
+                        <a class="collapse-item" href="/drug">List Obat</a>
+                        <a class="collapse-item" href="/drug/add">Tambah Obat</a>
                     </div>
                 </div>
             </li>
@@ -147,10 +147,6 @@
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                     aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">
-                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Settings
-                    </a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout
@@ -183,7 +179,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Apotek Laravel 2021</span>
+            <span>Copyright &copy; Kelompok 2 2022</span>
         </div>
     </div>
 </footer>
@@ -206,15 +202,15 @@ aria-hidden="true">
 <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin logout?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">×</span>
             </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">Anda akan keluar dari sistem informasi manajemen obat Apotek Firdan Farma.</div>
         <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="/logout">Logout</a>
+            <a class="btn btn-danger" href="/logout">Logout</a>
         </div>
     </div>
 </div>

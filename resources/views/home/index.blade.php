@@ -1,5 +1,5 @@
 @extends('templates/app')
-@section('title', 'Home')
+@section('title', 'Home | Apotek Firdan Farma')
 @section('subtitle', 'Home')
 @section('content')
 <!-- Content Row -->

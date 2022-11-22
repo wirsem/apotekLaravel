@@ -1,29 +1,29 @@
 @extends('templates/app')
-@section('title', 'Data Drug')
-@section('subtitle', 'Detail Drug')
+@section('title', 'Data Obat | Apotek Firdan Farma')
+@section('subtitle', 'Detail Obat')
 @section('content')
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
 	<div class="card-header d-flex">
-		<a class="btn btn-secondary" href="/drug">back</a>
+		<a class="btn btn-secondary" href="/drug">kembali</a>
 		<a class="btn btn-success mx-2" href="/drug/edit/{{ $drug->id }}">edit</a>
 		<form action="/drug/delete/{{ $drug->id }}" method="post">
 			@method("delete")
 			@csrf
-			<button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">delete</button>
+			<button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus obat?');">Delete</button>
 		</form>
 	</div>
 	<div class="card-body">
 		<div class="row">
 			<ul class="list-group col-md-2 font-weight-bolder">
-				<li class="list-group-item">Code</li>
-				<li class="list-group-item">Supplier ID</li>
-				<li class="list-group-item">Name Drug</li>
-				<li class="list-group-item">Producer</li>
-				<li class="list-group-item">Stock</li>
-				<li class="list-group-item">Price</li>
-				<li class="list-group-item">Created At</li>
-				<li class="list-group-item">Updated At</li>
+				<li class="list-group-item">Kode</li>
+				<li class="list-group-item">ID Supplier</li>
+				<li class="list-group-item">Nama Obat</li>
+				<li class="list-group-item">Produsen</li>
+				<li class="list-group-item">Stok</li>
+				<li class="list-group-item">Harga</li>
+				<li class="list-group-item">Dibuat Pada</li>
+				<li class="list-group-item">Diupdate pada</li>
 			</ul>
 			<ul class="list-group col-md-5">
 				<li class="list-group-item">{{ $drug->code }}</li>

@@ -1,6 +1,6 @@
 @extends('templates/app')
-@section('title', 'Data Drug')
-@section('subtitle', 'Add Drug')
+@section('title', 'Data Obat | Apotek Firdan Farma')
+@section('subtitle', 'Tambah Obat')
 @section('content')
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -11,14 +11,14 @@
 			@error('icon') <small class="text-danger"> {{ $message }} </small> @enderror
 			<div class="row">
 				<div class="form-group col-md-6">
-					<label class="form-label">Code</label>
+					<label class="form-label">Kode</label>
 					<input type="text" class="form-control" name="code" />
 					@error('code') <small class="text-danger"> {{ $message }} </small> @enderror
 				</div>
 				<div class="form-group col-md-6">
-					<label class="form-label">Supplier ID</label>
+					<label class="form-label">ID Supplier</label>
 					<select class="form-control select2" name="supplier_id">
-						<option selected disabled>Choose one</option>
+						<option selected disabled>Pilih satu</option>
 						@foreach($suppliers as $supplier)
 						<option value="{{ $supplier->id }}">{{ $supplier->id }} - {{ $supplier->name_supplier }}</option>
 						@endforeach
@@ -27,31 +27,31 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="form-label">Name Drug</label>
+				<label class="form-label">Nama Obat</label>
 				<input type="text" class="form-control" name="name_drug" />
 				@error('name_drug') <small class="text-danger"> {{ $message }} </small> @enderror
 			</div>
 			<div class="form-group">
-				<label class="form-label">Producer</label>
+				<label class="form-label">Produsen</label>
 				<input type="text" class="form-control" name="producer" />
 				@error('producer') <small class="text-danger"> {{ $message }} </small> @enderror
 			</div>
 			<div class="row">
 				<div class="form-group col-md-6">
-					<label class="form-label">Stock</label>
+					<label class="form-label">Stok</label>
 					<input type="number" class="form-control" name="stock" />
 					@error('stock') <small class="text-danger"> {{ $message }} </small> @enderror
 				</div>
 				<div class="form-group col-md-6">
-					<label class="form-label">Price</label>
+					<label class="form-label">Harga</label>
 					<input type="number" class="form-control" name="price" />
 					@error('price') <small class="text-danger"> {{ $message }} </small> @enderror
 				</div>
 			</div>
 		</div>
 		<div class="card-footer">
-			<button type="submit" class="btn btn-primary">Add</button>
-			<a href="/drug" class="btn btn-secondary">Back</a>
+			<button type="submit" class="btn btn-primary">Tambah</button>
+			<a href="/drug" class="btn btn-secondary">Kembali</a>
 		</div>
 	</form>
 </div>
