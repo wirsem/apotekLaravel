@@ -16,9 +16,9 @@ class AlreadyLogged
      */
     public function handle(Request $request, Closure $next)
     {
-        // if (session()->has('username')) {
-        //     return redirect()->back();
-        // }
+        if (session()->has('username')) {
+            return redirect()->back();
+        }
         return $next($request);
     }
 }
