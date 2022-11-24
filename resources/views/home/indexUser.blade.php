@@ -1,6 +1,7 @@
+{{-- Nanti taro codingan home user di sini --}}
 @extends('templates/app')
-@section('title', 'Halaman Admin | Apotek Firdan Farma')
-@section('subtitle', 'Halaman Admin')
+@section('title', 'Home User | Apotek Firdan Farma')
+@section('subtitle', 'Home User')
 @section('content')
 <!-- Content Row -->
 <div class="row">
