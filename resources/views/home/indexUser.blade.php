@@ -1,5 +1,5 @@
 {{-- Nanti taro codingan home user di sini --}}
-@extends('templates/app')
+@extends('templates/appUser')
 @section('title', 'Home User | Apotek Firdan Farma')
 @section('subtitle', 'Home User')
 @section('content')

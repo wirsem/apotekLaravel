@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController, HomeController, DrugController, SupplierController, TransactionController};
+use App\Http\Controllers\{UserController, HomeController, HomeUserController, DrugController, SupplierController, TransactionController};
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +28,7 @@ Route::middleware(['isLogged'])->group(function () {
 
 
 	Route::get('/drug', [DrugController::class, 'index']);
+	Route::get('/drugUser', [DrugController::class, 'indexUser']); // Drug User Route
 	Route::get('/drug/show/{drug:id}', [DrugController::class, 'show']);
 	Route::get('/drug/add', [DrugController::class, 'add']);
 	Route::post('/drug/store', [DrugController::class, 'store']);

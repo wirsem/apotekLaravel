@@ -34,10 +34,10 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/homeuser">
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-medkit"></i>
                 </div>
@@ -49,7 +49,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/home">
+                <a class="nav-link" href="/homeuser">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Home</span></a>
                 </li>
@@ -71,8 +71,8 @@
                 </a>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="/drug">List Obat</a>
-                        <a class="collapse-item" href="/drug/add">Tambah Obat</a>
+                        <a class="collapse-item" href="/drugUser">List Obat</a>
+                        {{-- <a class="collapse-item" href="/drug/add">Tambah Obat</a> --}}
                     </div>
                 </div>
             </li>
@@ -87,7 +87,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="/supplier">Suppliers List</a>
-                    <a class="collapse-item" href="/supplier/add">Add Supplier</a>
+                    {{-- <a class="collapse-item" href="/supplier/add">Add Supplier</a> --}}
                 </div>
             </div>
         </li>
@@ -102,7 +102,7 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="/transaction">Transactions List</a>
-                    <a class="collapse-item" href="/transaction/add">Add Transaction</a>
+                    {{-- <a class="collapse-item" href="/transaction/add">Add Transaction</a> --}}
                 </div>
             </div>
         </li>
@@ -146,7 +146,11 @@
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                    aria-labelledby="userDropdown">                    
+                    aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="{{ route('login') }}" data-toggle="modal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Login sebagai admin
+                    </a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout

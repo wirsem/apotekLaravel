@@ -15,6 +15,12 @@ class DrugController extends Controller
     	]);
     }
 
+    public function indexUser () {
+        return view('data/drug/indexUser', [
+    		'drugs' => Drug::latest()->get()
+        ]);
+    }
+
     public function show(Drug $drug)
     {
     	return view('/data/drug/show', [
