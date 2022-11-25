@@ -34,13 +34,13 @@ class DrugController extends Controller
         
         ]);
     }
-//perlu diperbaiki
+
     public function store(DrugRequest $request)
     {
     	if ($request->file('icon')) {
-    		$icon = $request->file('icon')->store('images/drugs');
+    		$icon = $request->file('icon')->store('public/images');
     	} else {
-    		$icon = 'images/drugs/default.png';
+    		$icon = 'public/images/default.png';
     	}
 
         // mengambil data dalam semua form
@@ -66,11 +66,11 @@ class DrugController extends Controller
     public function update(DrugRequest $request, Drug $drug)
     {
         if ($request->file('icon')) {
-            if ($drug->icon === 'images/drugs/default.png') {
-                $icon = $request->file('icon')->store('images/drugs');
+            if ($drug->icon === 'public/images/default.png') {
+                $icon = $request->file('icon')->store('public/images');
             } else {
                 \Storage::delete($drug['icon']);
-                $icon = $request->file('icon')->store('images/drugs');
+                $icon = $request->file('icon')->store('public/images');
             }
         } else {
             $icon = $drug['icon'];
@@ -89,7 +89,7 @@ class DrugController extends Controller
 
     public function delete(Drug $drug)
     {
-        if ($drug->icon !== 'images/drugs/default.png') {
+        if ($drug->icon !== 'public/images/default.png') {
             \Storage::delete($drug['icon']);
         }
 

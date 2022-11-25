@@ -35,7 +35,7 @@
 					@foreach($drugs as $drug)
 					<tr>
 						<td>
-							<img width="60" height="60" src="{{ asset('storage/' . $drug->icon) }}">
+							<img src="{{ asset('storage/images/' . $drug->icon) }}">
 						</td>
 						<td>{{ $drug->code }}</td>
 						<td>{{ $drug->name_drug }}</td>

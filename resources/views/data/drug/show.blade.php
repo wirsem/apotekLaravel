@@ -35,7 +35,7 @@
 				<li class="list-group-item">{{ $drug->created_at }}</li>
 				<li class="list-group-item">{{ $drug->updated_at }}</li>
 			</ul>
-			<img width="200" height="200" src="{{ asset('storage/' . $drug->icon) }}" alt="{{ $drug->name_drug }}">
+			<img width="200" height="200" src="{{ asset('storage/images/' . $drug->icon) }}" alt="{{ $drug->name_drug }}">
 		</div>
 	</div>
 </div>
