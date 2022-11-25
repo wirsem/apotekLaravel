@@ -15,5 +15,8 @@ class HomeUserController extends Controller
     		'transaction' => Transaction::count(),
     		'user' => User::count()
     	]);
+		
     }
+
+	
 }

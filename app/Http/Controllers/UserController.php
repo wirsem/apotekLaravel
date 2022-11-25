@@ -64,4 +64,10 @@ class UserController extends Controller
         session()->forget(['id', 'username', 'email']);
         return redirect('/login')->with('success', 'Anda telah logout dari sistem');
     }
+
+    public function kontak()
+    {
+    	
+    	return view('user/kontakKami');		
+    }
 }
