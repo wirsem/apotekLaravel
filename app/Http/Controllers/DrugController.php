@@ -34,7 +34,7 @@ class DrugController extends Controller
         
         ]);
     }
-
+//perlu diperbaiki
     public function store(DrugRequest $request)
     {
     	if ($request->file('icon')) {
