@@ -27,6 +27,8 @@ Route::middleware(['isLogged'])->group(function () {
 	Route::get('/homeuser', [HomeUserController::class, 'indexUser']); // Home User Route
 
 	Route::get('/kontak', [UserController::class, 'kontak']); // Kontak Kami Route
+	Route::get('/praktikdokter', [UserController::class, 'praktikDokter']); // Praktik Dokter Kami Route
+
 	
 
 	Route::get('/drug', [DrugController::class, 'index']);

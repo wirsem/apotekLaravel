@@ -70,4 +70,9 @@ class UserController extends Controller
     	
     	return view('user/kontakKami');		
     }
+
+    public function praktikDokter()
+    {
+        return view('user/praktikDokter');
+    }
 }

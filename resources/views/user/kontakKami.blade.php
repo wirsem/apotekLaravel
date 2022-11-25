@@ -11,10 +11,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-    <h3 style="font-weight: bold">Jl. Pisang Kipas No. 10, Malang</h3>
+    <h3 style="font-weight: bold">Jl. Pisang Kipas No. 10, Kota Malang</h3>
     <h3 style="font-weight: bold">0822-2911-4811</h3>
     <h3 style="font-weight: bold">Senin - Sabtu 08.00-22.00WIB</h3>
-    <h3><a>Google Maps Apotek Firdan Farma</a></h3>
+    <h3><a href="https://goo.gl/maps/7B57yyjBETKjKwsV6" style="bold text-decoration: none">Google Maps Apotek Firdan Farma</a></h3>
 </body>
 </html>
 
