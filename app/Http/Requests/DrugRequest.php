@@ -26,7 +26,6 @@ class DrugRequest extends FormRequest
         return [
             'icon' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
             'code' => 'required',
-            'supplier_id' => 'required',
             'name_drug' => 'required',
             'producer' => 'required',
             'stock' => 'required',

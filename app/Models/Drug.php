@@ -9,10 +9,10 @@ class Drug extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['icon', 'code', 'supplier_id', 'name_drug', 'producer', 'stock', 'price'];
+    protected $fillable = ['icon', 'code', 'name_drug', 'producer', 'stock', 'price'];
 
-    public function supplier()
-    {
-    	return $this->belongsTo(Supplier::class);
-    }
+    // public function supplier()
+    // {
+    // 	return $this->belongsTo(Supplier::class);
+    // }
 }

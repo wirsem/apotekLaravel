@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\DrugRequest;
-use App\Models\{Drug, Supplier};
+use App\Models\Drug;
 
 class DrugController extends Controller
 {
@@ -31,7 +31,7 @@ class DrugController extends Controller
     public function add()
     {
     	return view('data/drug/add', [
-            'suppliers' => Supplier::get()
+        
         ]);
     }
 
@@ -58,7 +58,7 @@ class DrugController extends Controller
     {
         return view('/data/drug/edit', [
             'drug' => $drug,
-            'suppliers' => Supplier::get()
+            
 
         ]);
     }

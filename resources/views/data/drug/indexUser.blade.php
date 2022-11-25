@@ -24,7 +24,6 @@
 					<tr>
 						<th>Icon</th>
 						<th>Kode</th>
-						<th>ID Supplier</th>
 						<th>Nama Obat</th>
 						<th>Produsen</th>
 						<th>Stok</th>
@@ -39,7 +38,6 @@
 							<img width="60" height="60" src="{{ asset('storage/' . $drug->icon) }}">
 						</td>
 						<td>{{ $drug->code }}</td>
-						<td>{{ $drug->supplier_id }} - {{ $drug->supplier->name_supplier }}</td>
 						<td>{{ $drug->name_drug }}</td>
 						<td>{{ $drug->producer }}</td>
 						<td>{{ $drug->stock }}</td>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{Drug, Supplier, Transaction, User};
+use App\Models\{Drug, User};
 
 class HomeController extends Controller
 {
@@ -11,8 +11,6 @@ class HomeController extends Controller
     {
     	return view('home/index', [
     		'drug' => Drug::count(),
-    		'supplier' => Supplier::count(),
-    		'transaction' => Transaction::count(),
     		'user' => User::count()
     	]);
     }

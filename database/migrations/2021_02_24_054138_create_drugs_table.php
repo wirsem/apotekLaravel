@@ -17,7 +17,6 @@ class CreateDrugsTable extends Migration
             $table->id();
             $table->string('icon')->nullable();
             $table->string('code');
-            $table->foreignId('supplier_id');
             $table->string('name_drug');
             $table->string('producer');
             $table->string('stock');

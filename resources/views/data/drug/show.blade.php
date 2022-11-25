@@ -17,7 +17,7 @@
 		<div class="row">
 			<ul class="list-group col-md-2 font-weight-bolder">
 				<li class="list-group-item">Kode</li>
-				<li class="list-group-item">ID Supplier</li>
+				
 				<li class="list-group-item">Nama Obat</li>
 				<li class="list-group-item">Produsen</li>
 				<li class="list-group-item">Stok</li>
@@ -27,7 +27,7 @@
 			</ul>
 			<ul class="list-group col-md-5">
 				<li class="list-group-item">{{ $drug->code }}</li>
-				<li class="list-group-item">{{ $drug->supplier_id }}</li>
+				
 				<li class="list-group-item">{{ $drug->name_drug }}</li>
 				<li class="list-group-item">{{ $drug->producer }}</li>
 				<li class="list-group-item">{{ $drug->stock }}</li>

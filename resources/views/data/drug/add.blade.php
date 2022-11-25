@@ -15,16 +15,7 @@
 					<input type="text" class="form-control" name="code" />
 					@error('code') <small class="text-danger"> {{ $message }} </small> @enderror
 				</div>
-				<div class="form-group col-md-6">
-					<label class="form-label">ID Supplier</label>
-					<select class="form-control select2" name="supplier_id">
-						<option selected disabled>Pilih satu</option>
-						@foreach($suppliers as $supplier)
-						<option value="{{ $supplier->id }}">{{ $supplier->id }} - {{ $supplier->name_supplier }}</option>
-						@endforeach
-					</select>
-					@error('supplier_id') <small class="text-danger"> {{ $message }} </small> @enderror
-				</div>
+				
 			</div>
 			<div class="form-group">
 				<label class="form-label">Nama Obat</label>
