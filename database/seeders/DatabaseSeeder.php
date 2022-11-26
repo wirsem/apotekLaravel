@@ -18,5 +18,11 @@ class DatabaseSeeder extends Seeder
         	'email' => 'user@gmail.com',
         	'password' => md5('user')
         ]);
+
+        \DB::table('users')->insert([
+        	'username' => 'admin',
+        	'email' => 'admin@gmail.com',
+        	'password' => md5('admin')
+        ]);
     }
 }
