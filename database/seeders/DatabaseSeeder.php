@@ -18,7 +18,5 @@ class DatabaseSeeder extends Seeder
         	'email' => 'user@gmail.com',
         	'password' => md5('user')
         ]);
-
-        \App\Models\Supplier::factory(5)->create();
     }
 }
