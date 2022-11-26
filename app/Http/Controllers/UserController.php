@@ -21,7 +21,7 @@ class UserController extends Controller
 
         $user = User::where(['username' => $username])->first();
     
-        if ($user) {
+        if ($user->role=='1') {
             if ($user->password == md5($password)) {
                 session([
                     'id' => $user->id,
@@ -32,9 +32,21 @@ class UserController extends Controller
             } else {
                 return redirect('/login')->with('error', 'Username/Password yang Anda masukkan salah!');
             }
+        } elseif ($user->role=='0') {
+            if ($user->password == md5($password)) {
+            session([
+                'id' => $user->id,
+                'username' => $user->username, 
+                'email' => $user->email
+            ]);
+            return redirect('/homeuser');
         } else {
             return redirect('/login')->with('error', 'Username/Password yang Anda masukkan salah!');
         }
+        }else {
+            return redirect('/login')->with('error', 'Username/Password yang Anda masukkan salah!');
+        }
+        
     }
 
     public function register()

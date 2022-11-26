@@ -17,7 +17,6 @@
 		<div class="row">
 			<ul class="list-group col-md-2 font-weight-bolder">
 				<li class="list-group-item">Kode</li>
-				
 				<li class="list-group-item">Nama Obat</li>
 				<li class="list-group-item">Produsen</li>
 				<li class="list-group-item">Stok</li>
@@ -35,7 +34,7 @@
 				<li class="list-group-item">{{ $drug->created_at }}</li>
 				<li class="list-group-item">{{ $drug->updated_at }}</li>
 			</ul>
-			<img width="200" height="200" src="{{ asset('storage/images/' . $drug->icon) }}" alt="{{ $drug->name_drug }}">
+			<img width="200" height="200" src="{{ asset('storage/images/' .$drug->icon) }}" alt="{{ $drug->name_drug }}"/>
 		</div>
 	</div>
 </div>

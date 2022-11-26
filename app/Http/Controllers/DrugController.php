@@ -38,14 +38,16 @@ class DrugController extends Controller
     public function store(DrugRequest $request)
     {
     	if ($request->file('icon')) {
-    		$icon = $request->file('icon')->store('public/images');
+    		$icon = $request->file('icon');
+            $filename = $icon->getClientOriginalName();
+            $icon->storeAs('public/images/', $filename);
     	} else {
     		$icon = 'public/images/default.png';
     	}
 
         // mengambil data dalam semua form
         $data = $request->all();
-        $data['icon'] = $icon;
+        $data['icon'] = $icon->getClientOriginalName();
 
         // menyimpan ke database
         Drug::create($data);
@@ -67,10 +69,14 @@ class DrugController extends Controller
     {
         if ($request->file('icon')) {
             if ($drug->icon === 'public/images/default.png') {
-                $icon = $request->file('icon')->store('public/images');
+                $icon = $request->file('icon');
+                $filename = $icon->getClientOriginalName();
+                $icon->storeAs('public/images/', $filename);
             } else {
                 \Storage::delete($drug['icon']);
-                $icon = $request->file('icon')->store('public/images');
+                $icon = $request->file('icon');
+                $filename = $icon->getClientOriginalName();
+                $icon->storeAs('public/images/', $filename);
             }
         } else {
             $icon = $drug['icon'];
@@ -78,7 +84,7 @@ class DrugController extends Controller
 
         // mengambil data dalam semua form
         $data = $request->all();
-        $data['icon'] = $icon;
+        $data['icon'] = $icon->getClientOriginalName();
 
         // update isi data lalu simpan ke database
         $drug->update($data);

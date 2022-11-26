@@ -72,7 +72,7 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/drugUser">List Obat</a>
-                        {{-- <a class="collapse-item" href="/drug/add">Tambah Obat</a> --}}
+                        
                     </div>
                 </div>
             </li>
@@ -104,7 +104,7 @@
                     <a class="collapse-item" href="/kontak">Kontak Kami</a>
                     {{-- <a class="collapse-item" href="/transaction/add">Add Transaction</a> --}}
                 </div>
-            </div>
+            </div>  
         </li>
 
         <!-- Divider -->
@@ -147,10 +147,6 @@
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                     aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="{{ route('login') }}" data-toggle="modal">
-                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Login sebagai admin
-                    </a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout

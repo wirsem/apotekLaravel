@@ -20,17 +20,9 @@ Route::middleware(['alreadyLogged'])->group(function () {
 	Route::get('/register', [UserController::class, 'register']);
 	Route::post('/registered', [UserController::class, 'registered']);
 });
-
-Route::middleware(['isLogged'])->group(function () {
+Route::middleware(['AdminMiddleware'])->group(function () {
 	Route::get('/logout', [UserController::class, 'logout']);
 	Route::get('/home', [HomeController::class, 'index']);
-	Route::get('/homeuser', [HomeUserController::class, 'indexUser']); // Home User Route
-
-	Route::get('/kontak', [UserController::class, 'kontak']); // Kontak Kami Route
-	Route::get('/praktikdokter', [UserController::class, 'praktikDokter']); // Praktik Dokter Kami Route
-
-	
-
 	Route::get('/drug', [DrugController::class, 'index']);
 	Route::get('/drugUser', [DrugController::class, 'indexUser']); // Drug User Route
 	Route::get('/drug/show/{drug:id}', [DrugController::class, 'show']);
@@ -40,19 +32,15 @@ Route::middleware(['isLogged'])->group(function () {
 	Route::put('/drug/update/{drug:id}', [DrugController::class, 'update']);
 	Route::delete('/drug/delete/{drug:id}', [DrugController::class, 'delete']);
 
-	Route::get('/supplier', [SupplierController::class, 'index']);
-	Route::get('/supplier/show/{supplier:id}', [SupplierController::class, 'show']);
-	Route::get('/supplier/add', [SupplierController::class, 'add']);
-	Route::post('/supplier/store', [SupplierController::class, 'store']);
-	Route::get('/supplier/edit/{supplier:id}', [SupplierController::class, 'edit']);
-	Route::put('/supplier/update/{supplier:id}', [SupplierController::class, 'update']);
-	Route::delete('/supplier/delete/{supplier:id}', [SupplierController::class, 'delete']);
-
-	Route::get('/transaction', [TransactionController::class, 'index']);
-	Route::get('/transaction/show/{transaction:id}', [TransactionController::class, 'show']);
-	Route::get('/transaction/add', [TransactionController::class, 'add']);
-	Route::post('/transaction/store', [TransactionController::class, 'store']);
-	Route::delete('/transaction/delete/{transaction:id}', [TransactionController::class, 'delete']);    
+});
+Route::middleware(['isLogged'])->group(function () {
+	Route::get('/logout', [UserController::class, 'logout']);
+	Route::get('/homeuser', [HomeUserController::class, 'indexUser']); // Home User Route
+	Route::get('/drug', [DrugController::class, 'index']);
+	Route::get('/drugUser', [DrugController::class, 'indexUser']); // Drug User Route
+	Route::get('/drug/show/{drug:id}', [DrugController::class, 'show']);
+	Route::get('/kontak', [UserController::class, 'kontak']); // Kontak Kami Route
+	Route::get('/praktikdokter', [UserController::class, 'praktikDokter']); // Praktik Dokter Kami Route
 });
 
 

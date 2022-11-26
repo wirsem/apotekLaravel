@@ -23,7 +23,6 @@
 		</div>
 	</div>
 
-
 	<!-- Pending Requests Card Example -->
 	{{-- <div class="col-xl-3 col-md-6 mb-4">
 		<div class="card border-left-warning shadow h-100 py-2">
@@ -42,15 +41,19 @@
 		</div>
 	</div> --}}
 </div>
-<div class="row justify-content-center">
+<div class="row g-5">
 	@foreach ($drugs as $drug)
 	<div class="col-md-4">
-	<div class="card" style="width: 18rem;">
-		<img class="card-img-top" src="{{ url('public/images')}}/{{$drug->icon}}" alt="...">
+	<div class="card" >
+		<img class="card-img-top" width="400" height="400" src="{{ asset('storage/images/' .$drug->icon) }}" alt="...">
 		<div class="card-body">
-			<h5 class="card-title">Card title</h5>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<a href="#" class="btn btn-primary">Go somewhere</a>
+			<h3 class="card-title">{{$drug->name_drug}}</h3>
+			<p class="card-text">
+				<strong>Produsen :</strong> {{$drug->producer}} <br>
+				<strong>Harga :</strong> Rp. {{number_format ($drug->price)}} <br>
+				<strong>Stok :</strong> {{$drug->stock}} <br>
+			</p>
+		
 		</div>
 		</div>
 	</div>

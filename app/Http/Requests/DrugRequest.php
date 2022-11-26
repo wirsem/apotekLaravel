@@ -24,7 +24,7 @@ class DrugRequest extends FormRequest
     public function rules()
     {
         return [
-            'icon' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+            'icon' => 'image|mimes:jpeg,png,jpg,svg|max:2048|',
             'code' => 'required',
             'name_drug' => 'required',
             'producer' => 'required',

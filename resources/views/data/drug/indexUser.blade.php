@@ -28,23 +28,19 @@
 						<th>Produsen</th>
 						<th>Stok</th>
 						<th>Harga</th>
-						<th>Opsi</th>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach($drugs as $drug)
 					<tr>
 						<td>
-							<img width="60" height="60" src="{{ asset('storage/' . $drug->icon) }}">
+							<img width="60" height="60" src="{{ asset('storage/images/' . $drug->icon) }}">
 						</td>
 						<td>{{ $drug->code }}</td>
 						<td>{{ $drug->name_drug }}</td>
 						<td>{{ $drug->producer }}</td>
 						<td>{{ $drug->stock }}</td>
-						<td>Rp{{ $drug->price }}</td>
-						<td>
-							<a href="/drug/show/{{ $drug->id }}" class="btn btn-info">detail</a>
-						</td>
+						<td>Rp. {{number_format ($drug->price)}}</td>
 					</tr>
 					@endforeach
 				</tbody>
